@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.manolo.a04_calculadorabasicacompletaradiobutton.MainActivity">
+
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/rg"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/tvOp2"
+        android:layout_toRightOf="@+id/tvOp2"
+        android:ems="6"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rg"
+        android:layout_alignLeft="@+id/et1"
+        android:layout_alignStart="@+id/et1"
+        android:ems="6"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/tvOp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/et1"
+        android:layout_alignBottom="@+id/et1"
+        android:layout_alignLeft="@+id/tvOp2"
+        android:layout_alignStart="@+id/tvOp2"
+        android:text="Operador1:" />
+
+    <TextView
+        android:id="@+id/tvOp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rg"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:text="Operador2:" />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginTop="79dp">
+
+        <RadioButton
+            android:id="@+id/rbSuma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sumar" />
+
+        <RadioButton
+            android:id="@+id/rbResta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Restar" />
+
+        <RadioButton
+            android:id="@+id/rbDivision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dividir" />
+
+        <RadioButton
+            android:id="@+id/rbMultiplicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Multiplicar" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvResul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp" />
+
+    <Button
+        android:id="@+id/btnOperar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvOp2"
+        android:layout_alignStart="@+id/tvOp2"
+        android:layout_below="@+id/et2"
+        android:layout_marginTop="64dp"
+        android:onClick="operar"
+        android:text="Operar" />
+
+</RelativeLayout>
